@@ -16,7 +16,7 @@ namespace RoboToyTable
         private static readonly LinkedList<string> _directions
             = new LinkedList<string>(new[] { North, East, South, West });
 
-        public static bool IsValid(this string direction)
+        public static bool IsValidDirection(this string direction)
             => _directions.Contains(direction);
 
         public static string RotateLeft(this string direction)

@@ -41,12 +41,12 @@ namespace RoboToyTable
 
         public virtual void ExecuteRotateLeftCommand()
         {
-            Facing = Facing.IsValid() ? Facing.RotateLeft() : null;
+            Facing = Facing.IsValidDirection() ? Facing.RotateLeft() : null;
         }
 
         public virtual void ExecuteRotateRightCommand()
         {
-            Facing = Facing.IsValid() ? Facing.RotateRight() : null;
+            Facing = Facing.IsValidDirection() ? Facing.RotateRight() : null;
         }
 
         public virtual string? ExecuteReportCommand()
@@ -58,7 +58,7 @@ namespace RoboToyTable
         {
             var xIsValid = x >= 0 && x < _maxX;
             var yIsValid = y >= 0 && y < _maxY;
-            return xIsValid && yIsValid && direction.IsValid();
+            return xIsValid && yIsValid && direction.IsValidDirection();
         }
     }
 }
