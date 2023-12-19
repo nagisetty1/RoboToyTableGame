@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RoboToyTable": {
+      "commandName": "Project",
+      "commandLineArgs": "commandsFile1.txt commandsFile2.txt"
+    }
+  }
+}
