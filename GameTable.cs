@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace RoboToyTable
 {
-    public class GameTable
+    public class GameTable : IGameTable
     {
         private static readonly Regex _placeCommand = new Regex(@"PLACE (\d+),(\d+),(\w+)");
 
-        private readonly RoboToy robotoy;
+        private readonly IRoboToy robotoy;
 
-        public GameTable(RoboToy _robotoy)
+        public GameTable(IRoboToy _robotoy)
         {
             robotoy = _robotoy;
         }

@@ -19,8 +19,9 @@
 
         private static void ProcessCommandsFromFile(string path)
         {
-            var toyRobot = new RoboToy();
-            var gameTable = new GameTable(toyRobot);
+            //TODO: Add DI
+            IRoboToy toyRobot = new RoboToy();
+            IGameTable gameTable = new GameTable(toyRobot);
 
             IEnumerable<string> commandLines = File.ReadLines(path);
             foreach(var commandLine in commandLines)

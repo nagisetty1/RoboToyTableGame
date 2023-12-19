@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RoboToyTable
 {
-    public class RoboToy
+    public class RoboToy : IRoboToy
     {
         private readonly int _maxX;
         private readonly int _maxY;
